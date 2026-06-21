@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Клуб мафии «Шеф»</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page" id="top">
+    <!-- Шапка сайта и мобильное меню -->
+    <header class="header">
+      <div class="container header__inner">
+        <a class="header__brand" href="#top">Клуб мафии <span>“Шеф”</span></a>
+        <nav class="nav" aria-label="Навигация">
+          <a href="#top">Главная</a>
+          <a href="#schedule">Расписание</a>
+          <a href="#advantages">Наши преимущества</a>
+          <a href="#question">Задать вопрос</a>
+          <a href="#shop">Купить эксклюзив</a>
+        </nav>
+        <button class="header__phone" type="button" data-modal-open="callModal">+7 (999) 999-99-99</button>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="Открыть меню" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="mobile-menu" data-mobile-menu aria-hidden="true">
+        <div class="mobile-menu__label">меню</div>
+        <nav class="mobile-menu__panel" aria-label="Мобильное меню">
+          <button class="mobile-menu__close" type="button" data-menu-close aria-label="Закрыть меню">×</button>
+          <a href="#top">Главная</a>
+          <a href="#schedule">Расписание</a>
+          <a href="#advantages">Почему выбирают нас?</a>
+          <a href="#shop">Купить эксклюзив</a>
+          <a href="#question">Задать вопрос</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Главный экран -->
+      <section class="hero section" aria-labelledby="heroTitle">
+        <span class="side-bar side-bar--left" aria-hidden="true"></span>
+        <span class="side-bar side-bar--right" aria-hidden="true"></span>
+
+        <div class="container hero__inner">
+          <h1 class="hero__title" id="heroTitle">Клуб мафии <span>“Шеф”</span></h1>
+
+          <div class="hero__left">
+            <div class="hat" aria-hidden="true"></div>
+            <p class="hero__lead">У нас мафия —</p>
+            <h2 class="hero__subtitle">Больше чем просто игра</h2>
+            <p class="hero__text">Для нас мафия - это новые знакомства, эмоции и дружелюбное комьюнити игроков.</p>
+            <a class="btn btn--hero" href="https://vk.com/guru_mafia" target="_blank" rel="noopener"><span>Вступить в клуб</span></a>
+          </div>
+
+          <div class="hero__photo-wrap" data-hero-slideshow>
+            <img class="hero__photo" data-hero-image src="assets/img/table.jpg" alt="Игровой стол клуба мафии">
+          </div>
+        </div>
+      </section>
+
+      <!-- Расписание игр -->
+      <section class="schedule section" id="schedule" aria-labelledby="scheduleTitle">
+        <div class="container schedule__inner">
+          <img class="schedule__building" src="assets/img/building.png" alt="">
+          <img class="smoke smoke--schedule" src="assets/img/smoke.png" alt="" aria-hidden="true">
+
+          <h2 class="section-title section-title--center" id="scheduleTitle">Расписание <span>игр</span></h2>
+
+          <div class="days" aria-label="Дни недели">
+            <button class="day is-active" type="button" data-day="Понедельник">Пн</button>
+            <button class="day" type="button" data-day="Вторник">Вт</button>
+            <button class="day" type="button" data-day="Среда">Ср</button>
+            <button class="day" type="button" data-day="Четверг">Чт</button>
+            <button class="day" type="button" data-day="Пятница">Пт</button>
+            <button class="day" type="button" data-day="Суббота">Сб</button>
+            <button class="day" type="button" data-day="Воскресенье">Вс</button>
+          </div>
+
+          <div class="schedule__cards">
+            <article class="game-card">
+              <div class="game-card__body">
+                <p><span>Игра:</span><br>Городская Мафия</p>
+                <p><span>Время проведения:</span><br><b class="js-day">Понедельник</b>, 17:00-20:00</p>
+                <p><span>Адрес проведения:</span><br>Никольская, вл.1</p>
+                <p><span>Стоимость:</span><br>1000 рублей</p>
+              </div>
+              <button class="btn btn--schedule" type="button" data-modal-open="bookingModal"><span>Записаться</span></button>
+            </article>
+
+            <article class="game-card">
+              <div class="game-card__body">
+                <p><span>Игра:</span><br>Классическая Мафия</p>
+                <p><span>Время проведения:</span><br><b class="js-day">Понедельник</b>, 20:00-22:00</p>
+                <p><span>Адрес проведения:</span><br>Никольская, вл.1</p>
+                <p><span>Стоимость:</span><br>1000 рублей</p>
+              </div>
+              <button class="btn btn--schedule" type="button" data-modal-open="bookingModal"><span>Записаться</span></button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Преимущества клуба -->
+      <section class="advantages section" id="advantages" aria-labelledby="advantagesTitle">
+        <div class="container advantages__inner">
+          <img class="advantages__mask" src="assets/img/mask-transparent.png" alt="Маска">
+          <h2 class="section-title advantages__title" id="advantagesTitle"><span class="advantages__title-main">Почему выбирают</span><span class="advantages__title-accent">“Шеф”?</span></h2>
+
+          <div class="advantages__stage">
+            <div class="adv-slide is-active" data-slide="0">
+              <article class="adv-card adv-card--light">
+                <button class="adv-trigger" type="button" aria-expanded="false">
+                  <span>Уникальность</span><b>+</b>
+                </button>
+                <div class="adv-panel">
+                  <p>Уникальность нашего клуба — в постоянном развитии и внимании к деталям. В отличие от стандартных игр, где набор ролей остаётся неизменным, мы на каждом мероприятии экспериментируем с новыми персонажами и механиками. Мы не боимся пробовать нестандартные форматы: тематические вечера, сценарии с сюжетными поворотами, командные турниры.</p>
+                </div>
+              </article>
+
+              <article class="adv-card adv-card--dark">
+                <button class="adv-trigger" type="button" aria-expanded="false">
+                  <span>Антуражность</span><b>+</b>
+                </button>
+                <div class="adv-panel">
+                  <p>В нашем клубе каждая деталь работает на атмосферу: приглушённый свет, стильные карты с авторским дизайном, мафиозные шляпы, множество реквизита, тематические аксессуары для фотосессий, а также тот самый подвижный стол. Мы продумали даже музыкальное сопровождение — джаз, нео-нуар и саундтреки из фильмов о гангстерах создают нужное настроение с первых минут.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="adv-slide" data-slide="1">
+              <article class="adv-card adv-card--dark">
+                <button class="adv-trigger" type="button" aria-expanded="false">
+                  <span>Дружелюбность</span><b>+</b>
+                </button>
+                <div class="adv-panel">
+                  <p>В нашем клубе мафии царит особая атмосфера — здесь каждый чувствует себя своим. Наш подход помогает новичкам расслабиться и не бояться ошибиться, а опытным игрокам — сосредоточиться на стратегии, а не на напряжении. За нашими столами не бывает скучно, но и обижать друг друга никто не даст. Мы за честную игру, взаимное уважение и искренние эмоции.</p>
+                </div>
+              </article>
+
+              <article class="adv-card adv-card--light">
+                <button class="adv-trigger" type="button" aria-expanded="false">
+                  <span>Локация</span><b>+</b>
+                </button>
+                <div class="adv-panel">
+                  <p>Никольская, вл.1 — это идеальное место для проведения игр в мафию. Улица находится в самом центре города, всего в нескольких минутах ходьбы от метро. Несмотря на центральное расположение, помещение расположено в тихом переулке, где вас не будут отвлекать городской шум и прохожие. Рядом есть удобная парковка и несколько кафе, где можно обсудить игру после её окончания.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="advantages__person" aria-hidden="true">
+              <p>Impostor</p>
+              <img src="assets/img/impostor.png" alt="">
+            </div>
+          </div>
+
+          <div class="advantages__arrows">
+            <button class="round-btn" type="button" data-adv-prev aria-label="Предыдущий слайд">←</button>
+            <button class="round-btn" type="button" data-adv-next aria-label="Следующий слайд">→</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Атмосфера клуба -->
+      <section class="play section" aria-labelledby="playTitle">
+        <div class="container play__inner">
+          <h2 class="section-title section-title--center" id="playTitle">Поиграем в <span>“Шеф”?</span></h2>
+          <img class="play__pistol" src="assets/img/pistol.png" alt="" aria-hidden="true">
+
+          <div class="play__content">
+            <div class="speech-card">
+              <p>Мы <span>гарантируем</span>, что каждая игра будет увлекательным путешествием, которое объединит вашу команду и оставит яркие впечатления.</p>
+            </div>
+
+            <div class="play__text">
+              <p><span>Наш</span> клуб позволяет комфортно поиграть в городскую мафию и новичкам, и опытным игрокам. Ведущий очень постарается сделать так, чтобы всем было интересно за игровым столом.</p>
+              <p>Если вы поставили себе задачу <span>интересно поиграть</span> в мафию в Москве, да ещё и с друзьями в хорошей компании, тогда вам точно к нам.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="play-gallery" aria-label="Фотографии атмосферы клуба">
+          <img src="assets/img/mask-card.jpg" alt="Маска и карта">
+          <img src="assets/img/table.jpg" alt="Красный игровой стол">
+          <img src="assets/img/rings.jpg" alt="Мафиозный стиль">
+          <img src="assets/img/card-hand.jpg" alt="Карта мафии">
+          <img src="assets/img/players.jpg" alt="Игроки за столом">
+          <img src="assets/img/photo-zone.jpg" alt="Фотозона">
+          <img src="assets/img/people-masks.jpg" alt="Игроки в масках">
+        </div>
+        <div class="play-gallery-controls" aria-label="Управление слайдером фотографий">
+          <button class="round-btn" type="button" data-play-prev aria-label="Предыдущая фотография">←</button>
+          <button class="round-btn" type="button" data-play-next aria-label="Следующая фотография">→</button>
+        </div>
+
+        <div class="container play__text-mobile" aria-label="Описание клуба">
+          <p><span>Наш</span> клуб позволяет комфортно поиграть в городскую мафию и новичкам, и опытным игрокам. Ведущий очень постарается сделать так, чтобы всем было интересно за игровым столом.</p>
+          <p>Если вы поставили себе задачу <span>интересно поиграть</span> в мафию в Москве, да ещё и с друзьями в хорошей компании, тогда вам точно к нам!</p>
+        </div>
+      </section>
+
+      <!-- Магазин эксклюзива -->
+      <section class="shop section" id="shop" aria-labelledby="shopTitle">
+        <img class="chips chips--left" src="assets/img/chips.png" alt="">
+        <img class="chips chips--right" src="assets/img/chips.png" alt="">
+
+        <div class="container shop__inner">
+          <h2 class="section-title section-title--center" id="shopTitle">Купить эксклюзив от <span>«Шеф»</span></h2>
+
+          <div class="products">
+            <article class="product">
+              <img src="assets/img/deck.jpg" alt="Колода карт от клуба мафии Шеф">
+              <h3>Колода карт от клуба мафии “Шеф”</h3>
+              <p>Эксклюзивная колода карт для вашей любимой игры. Такой нет ни у кого!</p>
+              <div class="price"><strong>2000 ₽</strong><s>4000 ₽</s></div>
+              <button class="btn btn--buy btn--switch" type="button" data-buy><span>Купить</span></button>
+            </article>
+
+            <article class="product">
+              <img src="assets/img/board-game.jpg" alt="Настольная игра от клуба мафии Шеф">
+              <h3>Настольная игра от клуба мафии “Шеф”</h3>
+              <p>Эксклюзивный набор для вашей любимой игры. Такого нет ни у кого!</p>
+              <div class="price"><strong>5000 ₽</strong><s>6000 ₽</s></div>
+              <button class="btn btn--buy btn--switch" type="button" data-buy><span>Купить</span></button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Форма вопроса -->
+      <section class="question section" id="question" aria-labelledby="questionTitle">
+        <div class="stairs" aria-hidden="true"></div>
+        <div class="container question__inner">
+          <h2 class="section-title section-title--center" id="questionTitle">У вас остались <span>вопросы?</span></h2>
+
+          <form class="question-form" id="questionForm">
+            <label class="field">
+              <input type="text" name="name" placeholder="Имя" required>
+              <span>Ваше имя</span>
+            </label>
+            <label class="field">
+              <input type="tel" name="phone" placeholder="Номер" required>
+              <span>Ваш номер</span>
+            </label>
+            <label class="field field--area">
+              <textarea name="message" placeholder="Вопрос" required></textarea>
+              <span>Ваш вопрос</span>
+            </label>
+            <button class="btn btn--question btn--switch" type="submit"><span>Задать вопрос</span></button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <a class="footer__logo" href="#top">Клуб мафии<br><span>“Шеф”</span></a>
+
+        <div class="footer__nav">
+          <h2>Навигация</h2>
+          <a href="#top">Главная</a>
+          <a href="#schedule">Расписание</a>
+          <a href="#advantages">Наши преимущества</a>
+          <a href="#question">Задать вопрос</a>
+        </div>
+
+        <div class="footer__contacts">
+          <h2>Наши контакты</h2>
+          <button type="button" data-modal-open="callModal">+7 (999) 999-99-99</button>
+          <div class="socials" aria-label="Социальные сети">
+            <a href="https://vk.com/" target="_blank" rel="noopener" aria-label="VK">
+              <img src="assets/img/icon-vk.png" alt="">
+            </a>
+            <a href="https://telegram.org/" target="_blank" rel="noopener" aria-label="Telegram">
+              <img src="assets/img/icon-telegram.png" alt="">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+              <img src="assets/img/icon-instagram.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="footer__copy">2024-2026 © Мафия “Шеф”</p>
+    </footer>
+  </div>
+
+  <div class="modal" id="bookingModal" aria-hidden="true">
+    <div class="modal__box modal__box--booking" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">×</button>
+      <h2 id="bookingTitle">Для записи на <span>игру</span> заполните ваши данные:</h2>
+      <form class="booking-form" id="bookingForm">
+        <label class="field field--modal">
+          <input type="text" name="name" placeholder="Ваше имя" required>
+          <span>Ваше имя</span>
+        </label>
+        <label class="field field--modal">
+          <input type="tel" name="phone" placeholder="Ваш номер" required>
+          <span>Ваш номер</span>
+        </label>
+        <label class="field field--modal">
+          <input type="number" name="players" min="1" max="20" placeholder="Кол-во участников" required>
+          <span>Кол-во участников</span>
+        </label>
+        <button class="btn btn--modal" type="submit"><span>Отправить</span></button>
+        <p class="modal__note">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="successModal" aria-hidden="true">
+    <div class="toast" role="dialog" aria-modal="true">
+      <button class="toast__close" type="button" data-modal-close aria-label="Закрыть">×</button>
+      <p>Ваша заявка отправлена!<br><span>Ждите подтверждения</span></p>
+    </div>
+  </div>
+
+  <div class="modal" id="questionSuccessModal" aria-hidden="true">
+    <div class="toast" role="dialog" aria-modal="true">
+      <button class="toast__close" type="button" data-modal-close aria-label="Закрыть">×</button>
+      <p>Ваш <span>вопрос</span> отправлен!</p>
+    </div>
+  </div>
+
+  <div class="modal" id="payModal" aria-hidden="true">
+    <div class="toast toast--pay" role="dialog" aria-modal="true">
+      <button class="toast__close" type="button" data-modal-close aria-label="Закрыть">×</button>
+      <p><span>Перейти</span> к оплате</p>
+    </div>
+  </div>
+
+  <div class="modal" id="callModal" aria-hidden="true">
+    <div class="toast toast--call" role="dialog" aria-modal="true">
+      <button class="toast__close" type="button" data-modal-close aria-label="Закрыть">×</button>
+      <p>Нажмите, для вызова<br><span>+7 (999) 999-99-99</span></p>
+    </div>
+  </div>
+
+  <div class="payment-loader" id="paymentLoader" aria-hidden="true">
+    <div class="loader-ring"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
